@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: query-optimization-lab
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/querylab}
+    username: ${SPRING_DATASOURCE_USERNAME:app}
+    password: ${SPRING_DATASOURCE_PASSWORD:app}
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 30000
+
+logging:
+  level:
+    com.example.querylab: INFO
